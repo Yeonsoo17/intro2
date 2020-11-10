@@ -1,0 +1,56 @@
+body{
+    background-color: #f7f6f7;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.intro-container{ /*전체 감싸줌*/
+    display: grid;
+    grid-template-areas: 
+        "logo door" 
+        "footer footer";
+/*     grid-template-columns: 1fr 1fr; */
+    grid-template-rows: 5fr 1fr;
+  /*   position: relative; */
+}
+.logo{
+    grid-area:logo;
+    max-width: 40%;
+}
+#logo{ /* 로고 이미지*/
+    position: absolute;
+    max-width: 40%;
+    top: 15em;
+}
+.door{
+    grid-area: door;
+    margin-right: 30px;
+}
+.door img{
+/*     position: absolute; */
+    max-width: 25%;
+    max-height: 60%;
+    top: 12em;
+    -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+   /*  ui팀에서 짠 문 크기 width: 408px;
+    height: 685px; */
+}
+
+img #close:hover{
+    opacity: 0;
+}
+
+.footer{ /*바닥*/
+    grid-area: footer;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: auto;
+    height: 134px; /* ui팀에서 짠 높이 */
+    background-color: black;/*색 설정해야함*/
+    z-index: -1;
+}
